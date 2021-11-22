@@ -14,3 +14,7 @@ A player can stand on any hand they would like, but the dealer must continue to 
 When the dealer is at or over 17 they must stand and cannot draw anymore cards.
 
 If a player's hand is equal to the dealer's hand that is a push and no one wins.
+
+The dealer only reveals one card while the player decides to stand or hit for more draws from the deck.
+
+Players can insure a hand when the dealer draws an Ace as the first card, in case they have a blackjack.
