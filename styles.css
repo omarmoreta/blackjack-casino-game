@@ -1,0 +1,21 @@
+h1 {
+  color: white;
+  text-align: center;
+  border-style: dotted;
+  border-width: thick;
+  border-radius: 100px;
+}
+
+body {
+  background-color: darkgreen;
+}
+
+.dealer {
+  color: white;
+  text-align: center;
+}
+
+.player {
+  color: white;
+  text-align: center;
+}
