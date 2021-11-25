@@ -2,7 +2,8 @@
 let suit = ["hearts", "diamonds", "spades", "clubs"];
 let value = ["Ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "Joker", "Queen", "King"];
 let deck = [];
-let usedDeck = [];
+let dealerHand = [];
+let playerHand = [];
 
 function createCards() {
   for (let s = 0; s < suit.length; s++) {
@@ -19,6 +20,7 @@ function createCards() {
   return deck;
 }
 console.log(createCards());
+
 //Create a function to shuffle the deck
 function shuffle(deck) {
   deck.sort(() => Math.random() - 0.5);
@@ -34,8 +36,9 @@ function dealerDraw() {
   let randomCard = deck[Math.floor(Math.random() * deck.length)];
   dealerCard.innerHTML = randomCard;
   dealer.append(dealerCard);
-  usedDeck.push(randomCard);
+  dealerHand.push(randomCard);
   deck.pop(randomCard);
+  updateDealer();
   return dealer;
 }
 
@@ -46,11 +49,38 @@ function playerDraw() {
   let randomCard = deck[Math.floor(Math.random() * deck.length)];
   playerCard.innerHTML = randomCard;
   player.append(playerCard);
-  usedDeck.push(randomCard);
+  playerHand.push(randomCard);
   deck.pop(randomCard);
+  updatePlayer();
   return player;
 }
-console.log(dealer, player);
+
 dealerDraw();
 playerDraw();
-console.log(usedDeck);
+
+//Hit and Stay
+let hitBtn = document.getElementById("hit-btn");
+hitBtn.addEventListener("click", () => {
+  playerDraw();
+  updatePlayer();
+});
+
+let stayBtn = document.getElementById("stay-btn");
+stayBtn.addEventListener("click", () => {
+  dealerDraw();
+  updateDealer();
+});
+
+function updateDealer() {
+  let dealerScore = document.getElementById("dealer-score");
+  for (let i = 0; i < dealerHand.length; i++) {
+    dealerScore.innerHTML = dealerHand;
+  }
+}
+
+function updatePlayer() {
+  let playerScore = document.getElementById("player-score");
+  for (let i = 0; i < playerHand.length; i++) {
+    playerScore.innerHTML = playerHand;
+  }
+}
