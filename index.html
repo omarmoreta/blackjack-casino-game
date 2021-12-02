@@ -10,19 +10,20 @@
   <body>
     <div class="main">
       <h1>Blackjack Casino Game</h1>
-      <div id="dealer">Dealer Hand</div>
+      <button class="button" id="start-btn" onclick="startGame()">
+        Deal Cards!
+      </button>
+      <div id="dealer"></div>
+      <div id="dealer-score"></div>
+      <br />
       <div id="dealer-hand"></div>
       <br />
-      <div id="dealer-score">Dealer Score</div>
+      <div id="player"></div>
+      <div id="player-score"></div>
       <br />
-      <br />
-      <div id="player">Player Hand</div>
       <div id="player-hand"></div>
       <br />
-      <div id="player-score">Player Score</div>
-      <br />
-      <button id="hit-btn">Hit</button>
-      <button id="stay-btn">Stay</button>
+      <div id="new-buttons"></div>
     </div>
   </body>
   <script src="script.js"></script>

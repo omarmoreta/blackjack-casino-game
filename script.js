@@ -3,262 +3,262 @@ const cards = [
   {
     name: "Ace of Clubs",
     value: 11,
-    url: "assets/BlackJack-Cards/Ace-clubs.png",
+    url: "assets/Ace-clubs.png",
   },
   {
     name: "Ace of Diamonds",
     value: 11,
-    url: "assets/BlackJack-Cards/Ace-diamonds.png",
+    url: "assets/Ace-diamonds.png",
   },
   {
     name: "Ace of Hearts",
     value: 11,
-    url: "assets/BlackJack-Cards/Ace-hearts.png",
+    url: "assets/Ace-hearts.png",
   },
   {
     name: "Ace of Spades",
     value: 11,
-    url: "assets/BlackJack-Cards/Ace-spades.png",
+    url: "assets/Ace-spades.png",
   },
   {
     name: "Two of Clubs",
     value: 2,
-    url: "assets/BlackJack-Cards/Two-clubs.png",
+    url: "assets/Two-clubs.png",
   },
   {
     name: "Two of Diamonds",
     value: 2,
-    url: "assets/BlackJack-Cards/Two-diamonds.png",
+    url: "assets/Two-diamonds.png",
   },
   {
     name: "Two of Hearts",
     value: 2,
-    url: "assets/BlackJack-Cards/Two-hearts.png",
+    url: "assets/Two-hearts.png",
   },
   {
     name: "Two of Spades",
     value: 2,
-    url: "assets/BlackJack-Cards/Two-spades.png",
+    url: "assets/Two-spades.png",
   },
   {
     name: "Three of Clubs",
     value: 3,
-    url: "assets/BlackJack-Cards/Three-clubs.png",
+    url: "assets/Three-clubs.png",
   },
   {
     name: "Three of Diamonds",
     value: 3,
-    url: "assets/BlackJack-Cards/Three-diamonds.png",
+    url: "assets/Three-diamonds.png",
   },
   {
     name: "Three of Hearts",
     value: 3,
-    url: "assets/BlackJack-Cards/Three-hearts.png",
+    url: "assets/Three-hearts.png",
   },
   {
     name: "Three of Spades",
     value: 3,
-    url: "assets/BlackJack-Cards/Three-spades.png",
+    url: "assets/Three-spades.png",
   },
   {
     name: "Four of Clubs",
     value: 4,
-    url: "assets/BlackJack-Cards/Four-clubs.png",
+    url: "assets/Four-clubs.png",
   },
   {
     name: "Four of Diamonds",
     value: 4,
-    url: "assets/BlackJack-Cards/Four-diamonds.png",
+    url: "assets/Four-diamonds.png",
   },
   {
     name: "Four of Hearts",
     value: 4,
-    url: "assets/BlackJack-Cards/Four-hearts.png",
+    url: "assets/Four-hearts.png",
   },
   {
     name: "Four of Spades",
     value: 4,
-    url: "assets/BlackJack-Cards/Four-spades.png",
+    url: "assets/Four-spades.png",
   },
   {
     name: "Five of Clubs",
     value: 5,
-    url: "assets/BlackJack-Cards/Five-clubs.png",
+    url: "assets/Five-clubs.png",
   },
   {
     name: "Five of Diamonds",
     value: 5,
-    url: "assets/BlackJack-Cards/Five-diamonds.png",
+    url: "assets/Five-diamonds.png",
   },
   {
     name: "Five of Hearts",
     value: 5,
-    url: "assets/BlackJack-Cards/Five-hearts.png",
+    url: "assets/Five-hearts.png",
   },
   {
     name: "Five of Spades",
     value: 5,
-    url: "assets/BlackJack-Cards/Five-spades.png",
+    url: "assets/Five-spades.png",
   },
   {
     name: "Six of Clubs",
     value: 6,
-    url: "assets/BlackJack-Cards/Six-clubs.png",
+    url: "assets/Six-clubs.png",
   },
   {
     name: "Six of Diamonds",
     value: 6,
-    url: "assets/BlackJack-Cards/Six-diamonds.png",
+    url: "assets/Six-diamonds.png",
   },
   {
     name: "Six of Hearts",
     value: 6,
-    url: "assets/BlackJack-Cards/Six-hearts.png",
+    url: "assets/Six-hearts.png",
   },
   {
     name: "Six of Spades",
     value: 6,
-    url: "assets/BlackJack-Cards/Six-spades.png",
+    url: "assets/Six-spades.png",
   },
   {
     name: "Seven of Clubs",
     value: 7,
-    url: "assets/BlackJack-Cards/Seven-clubs.png",
+    url: "assets/Seven-clubs.png",
   },
   {
     name: "Seven of Diamonds",
     value: 7,
-    url: "assets/BlackJack-Cards/Seven-diamonds.png",
+    url: "assets/Seven-diamonds.png",
   },
   {
     name: "Seven of Hearts",
     value: 7,
-    url: "assets/BlackJack-Cards/Seven-hearts.png",
+    url: "assets/Seven-hearts.png",
   },
   {
     name: "Seven of Spades",
     value: 7,
-    url: "assets/BlackJack-Cards/Seven-spades.png",
+    url: "assets/Seven-spades.png",
   },
   {
     name: "Eight of Clubs",
     value: 8,
-    url: "assets/BlackJack-Cards/Eight-clubs.png",
+    url: "assets/Eight-clubs.png",
   },
   {
     name: "Eight of Diamonds",
     value: 8,
-    url: "assets/BlackJack-Cards/Eight-diamonds.png",
+    url: "assets/Eight-diamonds.png",
   },
   {
     name: "Eight of Hearts",
     value: 8,
-    url: "assets/BlackJack-Cards/Eight-hearts.png",
+    url: "assets/Eight-hearts.png",
   },
   {
     name: "Eight of Spades",
     value: 8,
-    url: "assets/BlackJack-Cards/Eight-spades.png",
+    url: "assets/Eight-spades.png",
   },
   {
     name: "Nine of Clubs",
     value: 9,
-    url: "assets/BlackJack-Cards/Nine-clubs.png",
+    url: "assets/Nine-clubs.png",
   },
   {
     name: "Nine of Diamonds",
     value: 9,
-    url: "assets/BlackJack-Cards/Nine-diamonds.png",
+    url: "assets/Nine-diamonds.png",
   },
   {
     name: "Nine of Hearts",
     value: 9,
-    url: "assets/BlackJack-Cards/Nine-hearts.png",
+    url: "assets/Nine-hearts.png",
   },
   {
     name: "Nine of Spades",
     value: 9,
-    url: "assets/BlackJack-Cards/Nine-spades.png",
+    url: "assets/Nine-spades.png",
   },
   {
     name: "Ten of Clubs",
     value: 10,
-    url: "assets/BlackJack-Cards/Ten-clubs.png",
+    url: "assets/Ten-clubs.png",
   },
   {
     name: "Ten of Diamonds",
     value: 10,
-    url: "assets/BlackJack-Cards/Ten-diamonds.png",
+    url: "assets/Ten-diamonds.png",
   },
   {
     name: "Ten of Hearts",
     value: 10,
-    url: "assets/BlackJack-Cards/Ten-hearts.png",
+    url: "assets/Ten-hearts.png",
   },
   {
     name: "Ten of Spades",
     value: 10,
-    url: "assets/BlackJack-Cards/Ten-spades.png",
+    url: "assets/Ten-spades.png",
   },
   {
     name: "Jack of Clubs",
     value: 10,
-    url: "assets/BlackJack-Cards/Jack-clubs.png",
+    url: "assets/Jack-clubs.png",
   },
   {
     name: "Jack of Diamonds",
     value: 10,
-    url: "assets/BlackJack-Cards/Jack-diamonds.png",
+    url: "assets/Jack-diamonds.png",
   },
   {
     name: "Jack of Hearts",
     value: 10,
-    url: "assets/BlackJack-Cards/Jack-hearts.png",
+    url: "assets/Jack-hearts.png",
   },
   {
     name: "Jack of Spades",
     value: 10,
-    url: "assets/BlackJack-Cards/Jack-spades.png",
+    url: "assets/Jack-spades.png",
   },
   {
     name: "Queen of Clubs",
     value: 10,
-    url: "assets/BlackJack-Cards/Queen-clubs.png",
+    url: "assets/Queen-clubs.png",
   },
   {
     name: "Queen of Diamonds",
     value: 10,
-    url: "assets/BlackJack-Cards/Queen-diamonds.png",
+    url: "assets/Queen-diamonds.png",
   },
   {
     name: "Queen of Hearts",
     value: 10,
-    url: "assets/BlackJack-Cards/Queen-hearts.png",
+    url: "assets/Queen-hearts.png",
   },
   {
     name: "Queen of Spades",
     value: 10,
-    url: "assets/BlackJack-Cards/Queen-spades.png",
+    url: "assets/Queen-spades.png",
   },
   {
     name: "King of Clubs",
     value: 10,
-    url: "assets/BlackJack-Cards/King-clubs.png",
+    url: "assets/King-clubs.png",
   },
   {
     name: "King of Diamonds",
     value: 10,
-    url: "assets/BlackJack-Cards/King-diamonds.png",
+    url: "assets/King-diamonds.png",
   },
   {
     name: "King of Hearts",
     value: 10,
-    url: "assets/BlackJack-Cards/King-hearts.png",
+    url: "assets/King-hearts.png",
   },
   {
     name: "King of Spades",
     value: 10,
-    url: "assets/BlackJack-Cards/King-spades.png",
+    url: "assets/King-spades.png",
   },
 ];
 
@@ -286,13 +286,13 @@ function dealToDealer() {
   dealerCard.src = newCard.url;
   dealerCard.style.width = "150px";
   dealerCard.style.height = "200px";
-  dealerCard.style.margin = "20px";
+  dealerCard.style.margin = "10px";
   dealer.append(dealerCard);
   dealerHand.push(newCard);
   updateDealer();
 }
 
-// //Cards for the player
+// //Cards for the player to display and push to hand
 function dealToPlayer() {
   let player = document.getElementById("player-hand");
   let playerCard = document.createElement("img");
@@ -300,62 +300,85 @@ function dealToPlayer() {
   playerCard.src = newCard.url;
   playerCard.style.width = "150px";
   playerCard.style.height = "200px";
-  playerCard.style.margin = "20px";
+  playerCard.style.margin = "10px";
   player.append(playerCard);
   playerHand.push(newCard);
   updatePlayer();
 }
-
-//Hit and Stay
-let hitBtn = document.getElementById("hit-btn");
-hitBtn.addEventListener("click", () => {
-  dealToPlayer();
-  updatePlayer();
-});
-
-let stayBtn = document.getElementById("stay-btn");
-stayBtn.addEventListener("click", () => {
-  dealToDealer();
-  updateDealer();
-  // hitBtn.remove();
-  // stayBtn.remove();
-});
 
 function updateDealer() {
   let dealerScore = document.getElementById("dealer-score");
   let dealerTotal = dealerHand
     .map((card) => card.value)
     .reduce((prev, curr) => prev + curr, 0);
-  dealerScore.textContent = "Dealer Total: " + dealerTotal;
+  dealerScore.textContent = "Total: " + dealerTotal;
   return dealerTotal;
 }
 
-let totalDealer = updateDealer();
+let dealerTotal = " ";
 
 function updatePlayer() {
   let playerScore = document.getElementById("player-score");
   let playerTotal = playerHand
     .map((card) => card.value)
     .reduce((prev, curr) => prev + curr, 0);
-  playerScore.textContent = "Player Total: " + playerTotal;
+  playerScore.textContent = "Total: " + playerTotal;
   return playerTotal;
 }
 
-let totalPlayer = updatePlayer();
-console.log(totalPlayer);
-console.log(totalDealer);
-// // function winner(){
-// //   if (totalPlayer > totalDealer){
-//   console.log("player wins")
-// } else
-// // }
+let playerTotal = "";
 
 //Start game function that will be added to an onclick button
 function startGame() {
+  document.getElementById("dealer").textContent = "Dealer Hand";
+  document.getElementById("dealer-score").textContent = "Dealer Score";
+  document.getElementById("player").textContent = "Player Hand";
+  document.getElementById("player-score").textContent = "Player Score";
   shuffle();
   dealToDealer();
   dealToDealer();
   dealToPlayer();
   dealToPlayer();
+  document.getElementById("start-btn").remove();
+  createButtons();
 }
-// startGame();
+
+//Function to create two buttons after the start of the game
+function createButtons() {
+  let newBtn = document.getElementById("new-buttons");
+  let hitBtn = document.createElement("button");
+  hitBtn.id = "hit-btn";
+  hitBtn.className = "button";
+  hitBtn.textContent = "Hit";
+  newBtn.append(hitBtn);
+  hitBtn.addEventListener("click", () => {
+    dealToPlayer();
+  });
+
+  let stayBtn = document.createElement("button");
+  stayBtn.id = "stay-btn";
+  stayBtn.className = "button";
+  stayBtn.textContent = "Stay";
+  newBtn.append(stayBtn);
+  stayBtn.addEventListener("click", () => {
+    dealToDealer();
+    hitBtn.remove();
+    stayBtn.remove();
+  });
+}
+
+// if (dealerTotal < 17) {
+//   dealToDealer();
+// } else if (totalDealer === 21) {
+//   console.log("Dealer has BlackJack");
+// }
+
+// function winner() {
+//   if (playerTotal > dealerTotal) {
+//     console.log("player wins");
+//   } else if (playerTotal < dealerTotal) {
+//     console.log("Dealer Wins");
+//   }
+// }
+// winner();
+// console.log(winner());
