@@ -14,10 +14,7 @@ body {
   color: white;
   text-align: center;
   font-size: 24px;
-}
-
-hr {
-  width: 90%;
+  user-select: none;
 }
 
 .button {
@@ -61,4 +58,22 @@ ul {
   background-color: orange;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+#listen {
+  float: right;
+  margin-right: 6%;
+  /* margin-top: 120px; */
+  display: flex;
+  align-items: center;
+}
+
+#icon {
+  width: 80px;
+  cursor: pointer;
+}
+
+#play {
+  padding: 1%;
+  cursor: pointer;
 }

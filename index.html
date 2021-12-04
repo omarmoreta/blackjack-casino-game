@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blackjack Casino Game</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div class="main">
@@ -72,6 +76,23 @@
       <button id="hit-btn" hidden="true"></button>
       <button id="stay-btn" hidden="true"></button>
     </div>
+    <div id="listen">
+      <p id="music">Play/Stop</p>
+      <i class="fa fa-circle-o-notch fa-spin" id="play"></i>
+      <img src="the next button" alt="Next Song Button" id="next" />
+    </div>
+    <audio id="first-song">
+      <source
+        src="assets/Music/sexy-fashion-beats-11176.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="second-song">
+      <source
+        src="assets/Music/jazzy-abstract-beat-11254.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
   </body>
   <script src="script.js"></script>
 </html>

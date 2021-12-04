@@ -263,12 +263,12 @@ const cards = [
 ];
 
 //Each hand for the dealer and player
-let dealerHand = [];
-let playerHand = [];
+const dealerHand = [];
+const playerHand = [];
 
 //Player and dealer result display
-let playerResult = document.getElementById("player-result");
-let dealerResult = document.getElementById("dealer-result");
+const playerResult = document.getElementById("player-result");
+const dealerResult = document.getElementById("dealer-result");
 
 //Shuffles the deck once the game begins
 function shuffle() {
@@ -288,8 +288,8 @@ function dealToDealer() {
   let dealerCard = document.createElement("img");
   let newCard = getCard();
   dealerCard.src = newCard.url;
-  dealerCard.style.width = "150px";
-  dealerCard.style.height = "200px";
+  dealerCard.style.width = "170px";
+  dealerCard.style.height = "220px";
   dealerCard.style.margin = "10px";
   dealer.append(dealerCard);
   dealerHand.push(newCard);
@@ -298,14 +298,14 @@ function dealToDealer() {
 
 //Cards for the player pushed to hand and updates score
 function dealToPlayer() {
-  let player = document.getElementById("player-hand");
+  let playerUi = document.getElementById("player-hand");
   let playerCard = document.createElement("img");
   let newCard = getCard();
   playerCard.src = newCard.url;
-  playerCard.style.width = "150px";
-  playerCard.style.height = "200px";
+  playerCard.style.width = "170px";
+  playerCard.style.height = "220px";
   playerCard.style.margin = "10px";
-  player.append(playerCard);
+  playerUi.append(playerCard);
   playerHand.push(newCard);
   updatePlayer();
 }
@@ -343,7 +343,9 @@ function startGame() {
   document.getElementById("dealer-score").textContent = "Dealer Score";
   document.getElementById("player").textContent = "Player Hand";
   document.getElementById("player-score").textContent = "Player Score";
-  document.getElementById("start-btn").style.display = "none";
+  let startBtn = document.getElementById("start-btn");
+  startBtn.setAttribute("onclick", "startNewGame()");
+  startBtn.style.display = "none";
   shuffle();
   dealToDealer();
   dealToDealer();
@@ -375,12 +377,13 @@ function hitBtn() {
   hitBtn.classList.add("button");
   hitBtn.textContent = "Hit";
   hitBtn.addEventListener("click", () => {
-    checkAces();
     dealToPlayer();
+    checkAces();
     if (updatePlayer() > 21) {
       playerResult.innerText = "Player LOST, BUSTED!";
       let newGame = document.getElementById("start-btn");
       newGame.style.display = "";
+      newGame.setAttribute("onclick", "startNewGame()");
       hideButtons();
     }
   });
@@ -393,8 +396,8 @@ function stayBtn() {
   stayBtn.classList.add("button");
   stayBtn.textContent = "Stay";
   stayBtn.addEventListener("click", () => {
-    checkAces();
     dealerPlay();
+    checkAces();
     checkWinner();
     hideButtons();
   });
@@ -404,10 +407,13 @@ function stayBtn() {
 function dealerPlay() {
   if (updateDealer() < 17) {
     dealToDealer();
+    checkAces();
     if (updateDealer() < 17) {
       dealToDealer();
+      checkAces();
       if (updateDealer() < 17) {
         dealToDealer();
+        checkAces();
       }
     }
   }
@@ -449,74 +455,35 @@ function checkWinner() {
 //Check for Aces and changes the value to 1 if more than one Ace in Hand
 function checkAces() {
   for (let i = 0; i < playerHand.length; i++) {
-    if (playerHand[i].value === 11 && updatePlayer < 21) {
-      playerHand[i] = 1;
+    if (updatePlayer() > 21) {
+      if (playerHand[i].value === 11) {
+        playerHand[i].value = 1;
+      }
     }
   }
   for (let i = 0; i < dealerHand.length; i++) {
-    if (dealerHand[i].value === 11 && updatePlayer < 21) {
-      dealerHand[i] = 1;
+    if (updateDealer() > 21) {
+      if (dealerHand[i].value === 11) {
+        dealerHand[i].value = 1;
+      }
     }
   }
-}
-
-//Clears the game to get ready for a new game with no hands
-function clearGame() {
-  // for (let i = 0; i < playerHand.length; i++) {
-  //   playerHand[i].pop();
-  // }
-  // for (let i = 0; i < dealerHand.length; i++) {
-  //   dealerHand[i].pop();
-  // }
-  document.getElementById("dealer-hand").remove();
-  document.getElementById("player-hand").remove();
-  playerHand.length = 0;
-  dealerHand.length = 0;
-  // let dealer = updateDealer();
-  // dealer = 0;
-  // let player = updatePlayer();
-  // player = 0;
-}
-//Cards for the dealer pushed to the hand array and updates score for the new game
-function newDealToDealer() {
-  let dealer = document.getElementById("new-dealer-hand");
-  let dealerCard = document.createElement("img");
-  let newCard = getCard();
-  dealerCard.src = newCard.url;
-  dealerCard.style.width = "150px";
-  dealerCard.style.height = "200px";
-  dealerCard.style.margin = "10px";
-  dealer.append(dealerCard);
-  dealerHand.push(newCard);
-  updateDealer();
-}
-
-//Cards for the player pushed to hand and updates score for the new game
-function newDealToPlayer() {
-  let player = document.getElementById("new-player-hand");
-  let playerCard = document.createElement("img");
-  let newCard = getCard();
-  playerCard.src = newCard.url;
-  playerCard.style.width = "150px";
-  playerCard.style.height = "200px";
-  playerCard.style.margin = "10px";
-  player.append(playerCard);
-  playerHand.push(newCard);
-  updatePlayer();
 }
 
 //Starts a new game from scratch
 function startNewGame() {
-  clearGame();
-  document.getElementById("dealer").textContent = "Dealer Hand";
-  document.getElementById("dealer-score").textContent = "Dealer Score";
-  document.getElementById("player").textContent = "Player Hand";
-  document.getElementById("player-score").textContent = "Player Score";
-  document.getElementById("start-btn").style.display = "none";
-  shuffle();
-  newDealToDealer();
-  newDealToDealer();
-  newDealToPlayer();
-  newDealToPlayer();
-  createButtons();
+  location.reload();
 }
+
+//Add music to the game with play/pause controls
+let song = document.getElementById("first-song");
+let play = document.getElementById("play");
+play.addEventListener("click", () => {
+  if (song.paused) {
+    song.play();
+    icon.src = "pause button";
+  } else {
+    song.pause();
+    icon.src = "play button";
+  }
+});
