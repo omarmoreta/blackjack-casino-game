@@ -34,6 +34,10 @@ hr {
   cursor: pointer;
 }
 
+ul {
+  list-style: none;
+}
+
 #start-btn,
 #hit-btn,
 #stay-btn {

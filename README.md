@@ -8,16 +8,14 @@ If a hand of cards equals to 21, that is a blackjack.
 
 If there are no blackjacks, the hand closest to it wins, so a hand of 19 beats a hand of 17.
 
-If a hand goes over 21, that player automatically loses.
+If a hand goes over 21, that player or dealer automatically loses.
 
-A player can stand on any hand they would like, but the dealer must continue to draw more cards until the hand is over 17.
+A player can stand on any hand they would like, but the dealer must continue to draw more cards until the hand is 17 or over.
 
 When the dealer is at or over 17 they must stand and cannot draw anymore cards.
 
-If a player's hand is equal to the dealer's hand that is a push and no one wins.
-
-The dealer only reveals one card while the player decides to stand or hit for more draws from the deck.
-
-Players can insure a hand when the dealer draws an Ace as the first card, in case they have a blackjack.
+If a player's hand is equal to the dealer's hand that is a push or tie and no one wins.
 
 This game will be created using HTML, CSS, and JavaScript.
+
+Card credits by Brian Huisman (GreyWyvern): https://opengameart.org/content/greywyvern-playing-card-set
