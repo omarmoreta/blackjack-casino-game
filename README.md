@@ -19,4 +19,5 @@ If a player's hand is equal to the dealer's hand that is a push or tie and no on
 This game will be created using HTML, CSS, and JavaScript.
 
 Cards by Brian Huisman (GreyWyvern): https://opengameart.org/content/greywyvern-playing-card-set
-Music by Coma-Media from Pixabay
+Music by Coma-Media from Pixabay: https://pixabay.com/music/search/theme/background%20music/
+Icons by FontAwesome: https://fontawesome.com/

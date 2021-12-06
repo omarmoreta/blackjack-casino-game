@@ -1,24 +1,44 @@
 h1 {
+  border-color: darkgreen;
   margin-top: 0;
-  font-size: 60px;
+  font-size: 25px;
   color: white;
   text-align: center;
-  border-color: orange;
   border-style: dotted;
   border-width: thick;
   border-radius: 100px;
 }
 
 body {
-  background-color: darkgreen;
+  background-color: orange;
   color: white;
   text-align: center;
-  font-size: 24px;
+  font-size: 25px;
   user-select: none;
 }
 
+@media screen and (min-width: 480px) {
+  h1 {
+    border-color: orange;
+    font-size: 60px;
+  }
+  body {
+    background-color: darkgreen;
+    font-size: 26px;
+  }
+  .button {
+    background-color: orange;
+  }
+  ul {
+    font-size: 25px;
+  }
+  #rules {
+    font-size: 25px;
+  }
+}
+
 .button {
-  background-color: orange;
+  background-color: darkgreen;
   color: white;
   border-radius: 100px;
   padding: 16px 32px;
@@ -33,6 +53,8 @@ body {
 
 ul {
   list-style: none;
+  font-size: 18px;
+  padding: 0;
 }
 
 #start-btn,
@@ -62,18 +84,19 @@ ul {
 
 #listen {
   float: right;
-  margin-right: 6%;
-  /* margin-top: 120px; */
+  margin: 6%;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  width: 100px;
 }
 
-#icon {
-  width: 80px;
+#play,
+#next {
+  padding: 5%;
   cursor: pointer;
 }
 
-#play {
-  padding: 1%;
-  cursor: pointer;
+#note {
+  padding-right: 10px;
 }

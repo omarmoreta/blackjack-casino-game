@@ -291,6 +291,7 @@ function dealToDealer() {
   dealerCard.style.width = "170px";
   dealerCard.style.height = "220px";
   dealerCard.style.margin = "10px";
+  dealerCard.style.boxShadow = "1px 1px 1px 2px orange";
   dealer.append(dealerCard);
   dealerHand.push(newCard);
   updateDealer();
@@ -305,6 +306,7 @@ function dealToPlayer() {
   playerCard.style.width = "170px";
   playerCard.style.height = "220px";
   playerCard.style.margin = "10px";
+  playerCard.style.boxShadow = "1px 1px 1px 2px orange";
   playerUi.append(playerCard);
   playerHand.push(newCard);
   updatePlayer();
@@ -351,6 +353,7 @@ function startGame() {
   dealToDealer();
   dealToPlayer();
   dealToPlayer();
+  checkAces();
   createButtons();
 }
 
@@ -476,14 +479,23 @@ function startNewGame() {
 }
 
 //Add music to the game with play/pause controls
-let song = document.getElementById("first-song");
+let firstSong = document.getElementById("first-song");
+let secondSong = document.getElementById("second-song");
 let play = document.getElementById("play");
+let next = document.getElementById("next");
 play.addEventListener("click", () => {
-  if (song.paused) {
-    song.play();
-    icon.src = "pause button";
+  if (firstSong.paused) {
+    secondSong.pause();
+    firstSong.play();
+    play.className = "fa fa-circle-o-notch fa-spin";
   } else {
-    song.pause();
-    icon.src = "play button";
+    firstSong.pause();
+    play.className = "fa fa-pause";
+  }
+});
+next.addEventListener("click", () => {
+  if (firstSong.play() || firstSong.paused) {
+    firstSong.pause();
+    secondSong.play();
   }
 });
