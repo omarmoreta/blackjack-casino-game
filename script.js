@@ -20,7 +20,7 @@ function getCard() {
 
 //Cards for the dealer pushed to the hand array and updates score
 function dealToDealer() {
-  let dealer = document.getElementById("dealer-hand");
+  let dealerUi = document.getElementById("dealer-hand");
   let dealerCard = document.createElement("img");
   let newCard = getCard();
   dealerCard.src = newCard.url;
@@ -28,7 +28,7 @@ function dealToDealer() {
   dealerCard.style.height = "220px";
   dealerCard.style.margin = "10px";
   dealerCard.style.boxShadow = "1px 1px 1px 2px orange";
-  dealer.append(dealerCard);
+  dealerUi.append(dealerCard);
   dealerHand.push(newCard);
   updateDealer();
 }
@@ -187,7 +187,6 @@ function checkWinner() {
   }
   let newGame = document.getElementById("start-btn");
   newGame.style.display = "";
-  newGame.removeAttribute("onclick");
   newGame.setAttribute("onclick", "startNewGame()");
 }
 
@@ -219,19 +218,41 @@ let firstSong = document.getElementById("first-song");
 let secondSong = document.getElementById("second-song");
 let play = document.getElementById("play");
 let next = document.getElementById("next");
+
 play.addEventListener("click", () => {
-  if (firstSong.paused) {
+  if (firstSong.paused && secondSong.paused) {
     secondSong.pause();
     firstSong.play();
     play.className = "fa fa-circle-o-notch fa-spin";
-  } else {
+    next.className = "fa fa-pause";
+  } else if (firstSong.play()) {
+    secondSong.pause();
     firstSong.pause();
     play.className = "fa fa-pause";
+    next.className = "fa fa-angle-double-right";
+  } else if (secondSong.play()) {
+    firstSong.pause();
+    secondSong.pause();
+    play.className = "fa fa-pause";
+    next.className = "fa fa-pause";
   }
 });
+
 next.addEventListener("click", () => {
-  if (firstSong.play() || firstSong.paused) {
+  if (secondSong.paused && firstSong.paused) {
     firstSong.pause();
     secondSong.play();
+    next.className = "fa fa-circle-o-notch fa-spin";
+    play.className = "fa fa-pause";
+  } else if (secondSong.play()) {
+    firstSong.pause();
+    secondSong.pause();
+    next.className = "fa fa-pause";
+    play.className = "fa fa-play";
+  } else if (firstSong.play()) {
+    firstSong.pause();
+    secondSong.pause();
+    play.className = "fa fa-play";
+    next.className = "fa fa-pause";
   }
 });
