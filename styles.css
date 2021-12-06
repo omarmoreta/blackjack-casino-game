@@ -1,4 +1,7 @@
 h1 {
+  border-color: darkgreen;
+  margin-top: 0;
+  font-size: 25px;
   color: white;
   text-align: center;
   border-style: dotted;
@@ -7,15 +10,93 @@ h1 {
 }
 
 body {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  user-select: none;
+}
+
+@media screen and (min-width: 480px) {
+  h1 {
+    border-color: orange;
+    font-size: 60px;
+  }
+  body {
+    background-color: darkgreen;
+    font-size: 26px;
+  }
+  .button {
+    background-color: orange;
+  }
+  ul {
+    font-size: 25px;
+  }
+  #rules {
+    font-size: 25px;
+  }
+}
+
+.button {
   background-color: darkgreen;
+  color: white;
+  border-radius: 100px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
-.dealer {
-  color: white;
-  text-align: center;
+ul {
+  list-style: none;
+  font-size: 18px;
+  padding: 0;
 }
 
-.player {
+#start-btn,
+#hit-btn,
+#stay-btn {
+  background-color: white;
+  color: darkgreen;
+  border: 2px solid orange;
+}
+
+#start-btn:hover,
+#hit-btn:hover,
+#stay-btn:hover {
+  background-color: orange;
   color: white;
-  text-align: center;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#start-btn:active,
+#hit-btn:active,
+#stay-btn:active {
+  background-color: orange;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#listen {
+  float: right;
+  margin: 6%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100px;
+}
+
+#play,
+#next {
+  padding: 5%;
+  cursor: pointer;
+}
+
+#note {
+  padding-right: 10px;
 }

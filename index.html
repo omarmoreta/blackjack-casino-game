@@ -6,13 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blackjack Casino Game</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <div class="main">
-      <h1>Blackjack Casino Game</h1>
-      <div class="dealer">Dealer Hand</div>
-      <div class="player">Player Hand</div>
+    <div id="main">
+      <h1>
+        <i class="fa fa-solid fa-diamond"></i> Blackjack Casino Game
+        <i class="fa fa-solid fa-diamond">
+      </h1>
+      <ul id="rules">
+        <li>BlackJack Rule Guide</li>
+        <br />
+        <li>
+          Blackjack is a popular card game played at most casinos, where players
+          try to beat the dealer/casino.
+        </li>
+        <br />
+        <li>
+          Cards are drawn from a deck and the goal is to have your hand be
+          greater than the dealer's hand.
+        </li>
+        <br />
+        <li>If a hand of cards equals to 21, that is a blackjack.</li>
+        <br />
+        <li>
+          If there are no blackjacks, the hand closest to it wins, so a hand of
+          19 beats a hand of 17.
+        </li>
+        <br />
+        <li>
+          If a hand goes over 21, that player or dealer automatically loses.
+        </li>
+        <br />
+        <li>
+          A player can stand on any hand, but the dealer must continue to draw
+          more cards until the hand is 17 or over.
+        </li>
+        <br />
+        <li>
+          When the dealer is at or over 17 they must stand and cannot draw
+          anymore cards.
+        </li>
+        <br />
+        <li>
+          If a player's hand is equal to the dealer's hand that is a push or tie
+          and no one wins.
+        </li>
+      </ul>
+      <div id="new-start"></div>
+      <button class="button" id="start-btn" onclick="startGame()">
+        Start New BlackJack!
+      </button>
+      <div id="dealer"></div>
+      <div id="dealer-score"></div>
+      <br />
+      <div id="new-dealer-hand"></div>
+      <div id="dealer-hand"></div>
+      <br />
+      <div id="dealer-result"></div>
+      <div id="player-result"></div>
+      <br />
+      <div id="player"></div>
+      <div id="player-score"></div>
+      <br />
+      <div id="new-player-hand"></div>
+      <div id="player-hand"></div>
+      <br />
+      <div id="new-buttons"></div>
+      <button id="hit-btn" hidden="true"></button>
+      <button id="stay-btn" hidden="true"></button>
     </div>
+    <div id="listen">
+      <p><i class="fa-solid fa-music" id="note"></i>Play</p>
+      <i class="fa fa-circle-o-notch fa-spin" id="play"></i>
+      <p>Next</p>
+      <i class="fa fa-angle-double-right" id="next"></i>
+    </div>
+    <audio id="first-song">
+      <source
+        src="assets/Music/sexy-fashion-beats-11176.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="second-song">
+      <source
+        src="assets/Music/jazzy-abstract-beat-11254.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
   </body>
   <script src="script.js"></script>
 </html>
