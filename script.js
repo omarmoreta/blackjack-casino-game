@@ -20,7 +20,7 @@ function getCard() {
 
 //Cards for the dealer pushed to the hand array and updates score
 function dealToDealer() {
-  let dealer = document.getElementById("dealer-hand");
+  let dealerUi = document.getElementById("dealer-hand");
   let dealerCard = document.createElement("img");
   let newCard = getCard();
   dealerCard.src = newCard.url;
@@ -28,7 +28,7 @@ function dealToDealer() {
   dealerCard.style.height = "220px";
   dealerCard.style.margin = "10px";
   dealerCard.style.boxShadow = "1px 1px 1px 2px orange";
-  dealer.append(dealerCard);
+  dealerUi.append(dealerCard);
   dealerHand.push(newCard);
   updateDealer();
 }
@@ -187,7 +187,6 @@ function checkWinner() {
   }
   let newGame = document.getElementById("start-btn");
   newGame.style.display = "";
-  newGame.removeAttribute("onclick");
   newGame.setAttribute("onclick", "startNewGame()");
 }
 
@@ -249,11 +248,11 @@ next.addEventListener("click", () => {
     firstSong.pause();
     secondSong.pause();
     next.className = "fa fa-pause";
-    play.className = "fa fa-pause";
+    play.className = "fa fa-play";
   } else if (firstSong.play()) {
     firstSong.pause();
     secondSong.pause();
-    play.className = "fa fa-pause";
+    play.className = "fa fa-play";
     next.className = "fa fa-pause";
   }
 });
