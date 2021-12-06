@@ -238,15 +238,22 @@ play.addEventListener("click", () => {
     next.className = "fa fa-pause";
   }
 });
+
 next.addEventListener("click", () => {
-  if (secondSong.paused) {
+  if (secondSong.paused && firstSong.paused) {
     firstSong.pause();
     secondSong.play();
     next.className = "fa fa-circle-o-notch fa-spin";
     play.className = "fa fa-pause";
   } else if (secondSong.play()) {
+    firstSong.pause();
     secondSong.pause();
     next.className = "fa fa-pause";
     play.className = "fa fa-pause";
+  } else if (firstSong.play()) {
+    firstSong.pause();
+    secondSong.pause();
+    play.className = "fa fa-pause";
+    next.className = "fa fa-pause";
   }
 });
