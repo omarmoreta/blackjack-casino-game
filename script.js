@@ -219,19 +219,34 @@ let firstSong = document.getElementById("first-song");
 let secondSong = document.getElementById("second-song");
 let play = document.getElementById("play");
 let next = document.getElementById("next");
+
 play.addEventListener("click", () => {
-  if (firstSong.paused) {
+  if (firstSong.paused && secondSong.paused) {
     secondSong.pause();
     firstSong.play();
     play.className = "fa fa-circle-o-notch fa-spin";
-  } else {
+    next.className = "fa fa-pause";
+  } else if (firstSong.play()) {
+    secondSong.pause();
     firstSong.pause();
     play.className = "fa fa-pause";
+    next.className = "fa fa-angle-double-right";
+  } else if (secondSong.play()) {
+    firstSong.pause();
+    secondSong.pause();
+    play.className = "fa fa-pause";
+    next.className = "fa fa-pause";
   }
 });
 next.addEventListener("click", () => {
-  if (firstSong.play() || firstSong.paused) {
+  if (secondSong.paused) {
     firstSong.pause();
     secondSong.play();
+    next.className = "fa fa-circle-o-notch fa-spin";
+    play.className = "fa fa-pause";
+  } else if (secondSong.play()) {
+    secondSong.pause();
+    next.className = "fa fa-pause";
+    play.className = "fa fa-pause";
   }
 });
