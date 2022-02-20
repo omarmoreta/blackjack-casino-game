@@ -1,4 +1,4 @@
-# blackjack-casino-game
+# Blackjack Casino Game
 
 Project was deployed on netlify: https://thirsty-bhaskara-2f67ea.netlify.app
 
