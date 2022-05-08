@@ -1,6 +1,7 @@
 # Blackjack Casino Game
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a4cfd8e5-79ee-4475-aea6-4e16278aa34a/deploy-status)](https://app.netlify.com/sites/thirsty-bhaskara-2f67ea/deploys)
+
 Project was deployed on netlify: https://thirsty-bhaskara-2f67ea.netlify.app
 
 Blackjack is a popular card game played at most casinos, where players try to beat the dealer/casino.
