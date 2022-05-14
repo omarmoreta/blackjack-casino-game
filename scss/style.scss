@@ -1,33 +1,44 @@
+$primary-color: darkgreen;
+$secondary-color: orange ;
+$tertiary-color: white;
+$fonts: Arial, Helvetica, Serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color: $secondary-color;
+  color: $tertiary-color;
+  text-align: center;
+  font-size: 25px;
+  user-select: none;
+}
+
 h1 {
-  border-color: darkgreen;
+  border-color: $primary-color;
   margin-top: 0;
   font-size: 25px;
-  color: white;
+  color: $tertiary-color;
   text-align: center;
   border-style: dotted;
   border-width: thick;
   border-radius: 100px;
 }
 
-body {
-  background-color: orange;
-  color: white;
-  text-align: center;
-  font-size: 25px;
-  user-select: none;
-}
-
 @media screen and (min-width: 480px) {
   h1 {
-    border-color: orange;
+    border-color: $secondary-color;
     font-size: 60px;
   }
   body {
-    background-color: darkgreen;
+    background-color: $primary-color;
     font-size: 26px;
   }
   .button {
-    background-color: orange;
+    background-color: $secondary-color;
   }
   ul {
     font-size: 25px;
@@ -38,8 +49,8 @@ body {
 }
 
 .button {
-  background-color: darkgreen;
-  color: white;
+  background-color: $primary-color;
+  color: $tertiary-color;
   border-radius: 100px;
   padding: 16px 32px;
   text-align: center;
@@ -60,16 +71,17 @@ ul {
 #start-btn,
 #hit-btn,
 #stay-btn {
-  background-color: white;
-  color: darkgreen;
-  border: 2px solid orange;
+  background-color: $tertiary-color;
+  color: $primary-color;
+  border: 2px solid $secondary-color ;
+  ;
 }
 
 #start-btn:hover,
 #hit-btn:hover,
 #stay-btn:hover {
-  background-color: orange;
-  color: white;
+  background-color: $secondary-color;
+  color: $tertiary-color;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
@@ -77,7 +89,7 @@ ul {
 #start-btn:active,
 #hit-btn:active,
 #stay-btn:active {
-  background-color: orange;
+  background-color: $secondary-color;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }

@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "install": "^0.13.0",
+    "npm": "^8.10.0",
+    "sass": "^1.51.0"
+  }
+}
