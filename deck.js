@@ -1,5 +1,5 @@
 //A deck of cards to use for the game
-const cards = [
+export const cards = [
   {
     name: "Ace of Clubs",
     value: 11,
